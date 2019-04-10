@@ -1,13 +1,12 @@
 package com.example.numbertowords;
 
 public class Convert {
-    private String word;
+    public String word;
     String[] ones = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
             "eleven", "twelve", "thirteen", "fourteen", "fiveteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"};
     String[] tens = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 
-    public Convert(String word) {
-        this.word = word;
+    public Convert(){
     }
 
     public String getWord() {
@@ -25,12 +24,12 @@ public class Convert {
         }else {
             word=ones[number%10];
             number /=10;
-            word = tens[number % 10] + word;
+            word = tens[number % 10] +" "+ word;
             number /= 10;
         }
         if (number == 0)
             return word;
-        return ones[number] + " hundred" + word;
+        return ones[number] +" " + " hundred "+" and " + word;
     }
     }
 

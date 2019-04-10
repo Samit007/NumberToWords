@@ -22,10 +22,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Enter here"
+        android:hint="Enter 3 digit number"
         android:textColor="#000"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:inputType="number"
+        android:maxLength="3"/>
 
     <Button
         android:id="@+id/btnconvert"
@@ -34,11 +36,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="Convert" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <TextView
             android:layout_width="match_parent"
@@ -61,5 +58,4 @@
             android:textColor="#000"
             android:textSize="30dp"
             android:textStyle="bold" />
-    </LinearLayout>
 </LinearLayout>
